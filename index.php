@@ -25,10 +25,15 @@ $clienteA = new Cliente();
 
 $clienteA->setNome("Tiuliel");
 
+$clienteA->setEmail("tiuliel@gmail.com");
+$clienteA->setSenha("123abc");
+
 ?>
 
 <!-- usando o getter para ler/acessar dados privados -->
 <p>Nome: <?=$clienteA->getNome()?></p>
+<p>E-mail: <?=$clienteA->getEmail()?></p>
+<p>Senha: <?=$clienteA->getSenha()?></p>
 
 <pre><?=var_dump($clienteA)?></pre>
 
