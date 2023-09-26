@@ -12,8 +12,8 @@
     <ul>
         <li>Herança (Super classe e sub classe)</li>
         <li>Métedos/propriedades protegidos (acessíveis apenas pela classe em que foram definidos e pelas subclasses)</li>
-        <li>Classe Abstrata</li>
-        <li>Classe Final</li>
+        <li>Classe Abstrata: não permite instâncias/pbjetos, serve apenas de modelo para subclasses.</li>
+        <li>Classe Final: não permite herança, ou seja, não aceita a criação de subclasses.</li>
         
     </ul>
 
@@ -44,6 +44,17 @@
     <pre><?=var_dump($clientePJ)?></pre>
 
     <?php
+require_once "src/MEI.php";
+$clienteMei = new MEI;
+$clienteMei->setNome("Panaka");
+$clienteMei->setAnoFundacao(2023);
+$clienteMei->setNomeFantasia("Panaka S/A");
+$clienteMei->setAreaDeAtuacao("Ervas medicinais");
+?>
+
+
+
+<?php
     require_once "src/Cliente.php";
     // da erro, pois Cliente é uma classe abstrata
     $clienteGenerico = new Cliente;
