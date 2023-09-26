@@ -11,6 +11,9 @@
     <h2>Assuntos abordados:</h2>
     <ul>
         <li>Herança (Super classe e sub classe)</li>
+        <li>Métedos/propriedades protegidos (acessíveis apenas pela classe em que foram definidos e pelas subclasses)</li>
+        <li>Classe Abstrata</li>
+        <li>Classe Final</li>
         
     </ul>
 
@@ -39,6 +42,14 @@
 
     <pre><?=var_dump($clientePF)?></pre>
     <pre><?=var_dump($clientePJ)?></pre>
+
+    <?php
+    require_once "src/Cliente.php";
+    // da erro, pois Cliente é uma classe abstrata
+    $clienteGenerico = new Cliente;
+    ?>
+
+<pre><?=var_dump($clienteGenerico)?></pre>
 
 
 </body>
