@@ -10,4 +10,8 @@ class Utilitarios{
         Permite o acesso à propriedade estática */
         self::$dataAtual = date("d/my");
     }
+
+    public static function definirAtendimento(int $idade):string{
+        return $idade >= 60 ? "Prioridade" : "Normal";
+    }
 }
