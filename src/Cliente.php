@@ -1,6 +1,4 @@
 <?php
-/* Classe Abstrata
-Não pode ser instanciada, ou seja, não é possível criar um objeto a partir desta classe. Ele é usada apenas como modelo para subclasses com herança. */
 
 abstract class Cliente{
 
@@ -9,7 +7,13 @@ abstract class Cliente{
     private string $senha;
     private string $situacao;
     
-    // métodos getters e setters
+    public function exibirDados():void {
+        echo "<h3>Método exibirDados - Classe Cliente</h3>";
+        echo "<h4> $this->nome </h4>";
+        echo "<h4>" .$this->getNome()."</h4>";
+        echo "<p>Situação: $this->situacao </p>";
+    }
+    
     public function setNome(string $nome):void{
         $this->nome = $nome;
     }
@@ -34,9 +38,7 @@ abstract class Cliente{
         return $this->senha;
     }
 
-    /* Visibilidade protected estes getters e setters poderão seu usados APENAS
-    aqui (classe Cliente) e nas subclasses (PessoaFisica e PessoaJuridica)
-    */
+   
     protected function getSituacao(): string
     {
         return $this->situacao;
