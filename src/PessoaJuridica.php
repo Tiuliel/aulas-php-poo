@@ -13,10 +13,8 @@ class PessoaJuridica extends Cliente{
 
     public function exibirDados(): void
     {
-        echo "<h3>Método exibirDados - Classe PessoaJuridica</h3>";
-        echo "<h4>" .$this->getNome(). "</h4>";
-        echo "<p>Situação:".$this->getSituacao()."</p>";
-        echo "<p> Nome Fantasia: ".$this->nomeFantasia."</p>";
+        parent::exibirDados();
+        echo "<p>Nome fantasia: $this->nomeFantasia</p>";
     }
     
     public function getAnoFundacao()
