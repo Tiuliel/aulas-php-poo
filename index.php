@@ -25,6 +25,17 @@
 use Fornecedor\Pagamento;
 use Prestador\Pagamento as PrestadorPagamento;
 
+
+/* 
+Use individual (Um pra cada classe)
+use Tabajara\MEI;
+use Tabajara\PessoaFisica;
+use Tabajara\PessoaJuridica; 
+*/
+
+
+// Use com uma lista de classes
+use Tabajara\{MEI, PessoaFisica, PessoaJuridica};
     require_once "src/fornecedores/Pagamento.php";
     require_once "src/prestadores/Pagamento.php";
 
@@ -40,16 +51,45 @@ use Prestador\Pagamento as PrestadorPagamento;
 //$pagamentoPrestador = new PrestadorPagamento; // objeto através de alias
 
 $pagamentoFornecedor = new Pagamento;
-$pagamentoPrestador = new PrestadorPagamento
+$pagamentoPrestador = new PrestadorPagamento;
 
+?>
 
-    ?>
+<?php
+
+require_once "src/PessoaFisica.php";
+require_once "src/PessoaJuridica.php";
+require_once "src/MEI.php";
+
+ $clientePF = new PessoaFisica;
+ $clientePJ = new PessoaJuridica;
+ $clienteMEI = new MEI;
+
+  $clientePF->setNome("Tiuliel");
+  $clientePF->setIdade(25);
+
+  $clientePJ->setNomeFantasia("Casseta e Planeta");
+  $clientePJ->setAnoFundacao(1986);
+
+  $clienteMEI->setAreaDeAtuacao("Humor");
+  $clienteMEI->setCnpj("987.654.321-0001-23");
+
+ ?>
+
+ <h2> Nome: <?=$clientePF->getNome()?></h2>
+ <h2> Idade: <?=$clientePF->getIdade()?></h2>
+
+ <h2> Nome: <?=$clientePJ->getNomeFantasia()?></h2>
+ <h2> Idade: <?=$clientePJ->getAnoFundacao()?></h2>
+
+ <h2> Nome: <?=$clienteMEI->getAreaDeAtuacao()?></h2>
+ <h2> Idade: <?=$clienteMEI->getCnpj()?></h2>
 
     <pre><?=var_dump($pagamentoFornecedor)?></pre>
     <pre><?=var_dump($pagamentoPrestador)?></pre>
 
     <?php
-    require_once "src/PessoaFisica.php";
+    //require_once "src/PessoaFisica.php";
     $cliente1 = new PessoaFisica;
     $cliente1->setNome("Astrogildo");
     $cliente1->setIdade(75);
