@@ -3,7 +3,9 @@
     "description" : "Exemplo de projeto PHP com Orientação a Objetos e com classes gerenciadas pelo Composer.",
     "autoload" : {
         "psr-4" : {
-            "Tabajara\\" : "src/"
-        }
+            "Tabajara\\" : "src/",
+            "Fornecedor\\" : "src/Fornecedores/",
+            "Prestador\\" : "src/Prestadores/"
+                }
     }
 }
