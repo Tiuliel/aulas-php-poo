@@ -24,7 +24,7 @@
 
         use Fornecedor\Pagamento;
         use Prestador\Pagamento as PrestadorPagamento;
-        use Tabajara\{MEI, PessoaFisica, PessoaJuridica};
+        use Tabajara\{Escola, MEI, PessoaFisica, PessoaJuridica};
 
         require_once "vendor/autoload.php";
 
@@ -65,6 +65,12 @@
         <pre><?= var_dump($pagamentoFornecedor) ?></pre>
         <pre><?= var_dump($pagamentoPrestador) ?></pre>
 
+        <hr>
+
+        <?php
+        $escola = new Escola;
+        var_dump($escola);
+        ?>
         
 
       
