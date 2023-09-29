@@ -21,14 +21,28 @@
 
     <?php
     /*  Só de fazer require/importação das classes (SEM NAMESPACE), já dá erro no servidor devido a terem o mesmo nome. */
+
+use Fornecedor\Pagamento;
+use Prestador\Pagamento as PrestadorPagamento;
+
     require_once "src/fornecedores/Pagamento.php";
     require_once "src/prestadores/Pagamento.php";
 
     // Forma 1 de usar classes com namespaces
-    $pagamentoFornecedor = new Fornecedor\Pagamento;
-    $pagamentoPrestador = new Prestador\Pagamento;
+    //$pagamentoFornecedor = new Fornecedor\Pagamento;
+    //$pagamentoPrestador = new Prestador\Pagamento;
 
-    
+    // Forma 2 de usar classes com namespaces
+//use Fornecedor\Pagamento;
+//use Prestador\Pagamento as PrestadorPagamento; // ALIAS (APELIDO)
+
+//$pagamentoFornecedor = new Pagamento;
+//$pagamentoPrestador = new PrestadorPagamento; // objeto através de alias
+
+$pagamentoFornecedor = new Pagamento;
+$pagamentoPrestador = new PrestadorPagamento
+
+
     ?>
 
     <pre><?=var_dump($pagamentoFornecedor)?></pre>
