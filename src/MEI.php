@@ -1,4 +1,5 @@
 <?php
+namespace Tabajara;
 require_once "PessoaJuridica.php";
 /* Classe Final
 não permite entender recursos para novas subclasses,

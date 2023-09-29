@@ -1,4 +1,5 @@
 <?php
+namespace Tabajara;
 class Utilitarios{
     // Propriedade estática
     public static string $dataAtual;
