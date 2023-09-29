@@ -72,33 +72,9 @@
         <pre><?= var_dump($pagamentoFornecedor) ?></pre>
         <pre><?= var_dump($pagamentoPrestador) ?></pre>
 
-        <?php
         
-        $cliente1 = new PessoaFisica;
-        $cliente1->setNome("Astrogildo");
-        $cliente1->setIdade(75);
 
-        $cliente2 = new PessoaFisica;
-        $cliente2->setNome("Noah");
-        $cliente2->setIdade(15);
-
-        require_once "src/Utilitarios.php";
-        Utilitarios::obterData();
-
-        ?>
-
-        <h2>Atendimento do dia:
-            <?= Utilitarios::$dataAtual ?> </h2>
-
-        <h3>Cliente: <?= $cliente1->getNome() ?></h3>
-        <p>Tipo de Atendimento:
-            <?= Utilitarios::definirAtendimento($cliente1->getIdade()) ?>
-        </p>
-
-        <h3>Cliente: <?= $cliente2->getNome() ?></h3>
-        <p>Tipo de Atendimento:
-            <?= Utilitarios::definirAtendimento($cliente2->getIdade()) ?>
-        </p>
+      
 
 </body>
 
